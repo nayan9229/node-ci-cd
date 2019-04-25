@@ -1,0 +1,32 @@
+{
+  "name": "ci-cd",
+  "version": "1.0.0",
+  "description": "Node.js app with docker and CI/CD pipeline demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "prod": "pm2-runtime start server.js --name APIs",
+    "dev": "pm2-runtime start server.js --name APIs-dev --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayan9229/node-ci-cd.git"
+  },
+  "keywords": [
+    "Node",
+    "CI/CD",
+    "jenkins",
+    "Docker"
+  ],
+  "author": "Nayan Mevada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayan9229/node-ci-cd/issues"
+  },
+  "homepage": "https://github.com/nayan9229/node-ci-cd#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pm2": "^3.5.0"
+  }
+}

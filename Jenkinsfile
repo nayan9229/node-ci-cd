@@ -11,9 +11,10 @@ node {
     }
     stage('Build'){
       if(env.BRANCH_NAME == 'master'){
-          sh 'docker build -t app --no-cache .'
-          sh 'docker tag app demo_apis'
+          sh 'docker build -t demo_apis --no-cache .'
+          sh 'docker tag demo_apis latest'
       }
+      sh 'docker-compose build'
     }
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){

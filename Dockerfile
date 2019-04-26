@@ -4,7 +4,7 @@ FROM keymetrics/pm2:8-alpine as builder
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-RUN apk --no-cache add python make g++
+RUN apk --no-cache add g++ nano curl
 
 COPY package*.json ./
 #RUN npm install

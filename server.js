@@ -8,11 +8,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/ping', function(req, res) {
-    res.send({status:'PONG'});
+    res.send({message:'PONG'});
 });
 
 app.get('/pong', function(req, res) {
-    res.send({status:'PING'});
+    res.send({message:'PING'});
 });
 
 app.listen(port , function() {

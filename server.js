@@ -15,6 +15,10 @@ app.get('/pong', function(req, res) {
     res.send({message:'PING'});
 });
 
+app.get('/whoiami', function(req, res) {
+    res.send({message:'I am express server node application'});
+});
+
 app.listen(port , function() {
     console.log('listening on port ' + port);
 });

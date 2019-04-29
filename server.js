@@ -16,7 +16,7 @@ app.get('/pong', function(req, res) {
 });
 
 app.get('/whoiami', function(req, res) {
-    res.send({message:'I am express server node application'});
+    res.send({message:'I am express server node applications'});
 });
 
 app.listen(port , function() {
